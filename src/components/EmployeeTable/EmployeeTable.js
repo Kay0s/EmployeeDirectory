@@ -33,7 +33,7 @@ function EmployeeTable() {
         </div>
         <table>
             <thead>
-                  <NameSortBtn />
+                  <NameSortBtn employees = {employees}/>
                 <tr>
                     <th>Id</th>
                     <th>First Name</th>

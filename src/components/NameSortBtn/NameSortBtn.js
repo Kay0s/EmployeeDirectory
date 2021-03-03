@@ -1,7 +1,5 @@
 import React, {useState} from "react";
 
-
-
  function NameSortBtn(props) { 
     const [clickVal, setClickVal] = useState();
     
@@ -14,7 +12,7 @@ import React, {useState} from "react";
           a.name > b.name ? 1 : -1
         );
         //target the name to sort
-        this.setState({ sortedEmployee });
+        props.setClickVal({ sortedEmployee });
       };
 
     return (
