@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./EmployeeTable.css";
 import API from "../../utils/API.js";
 import SearchForm from "../SearchForm/SearchForm";
-import FNameSortBtn from "../NameSortBtn/NameSortBtn";
+import FNameSortBtn from "../FNameSortBtn/FNameSortBtn";
 
 
 function EmployeeTable() {
