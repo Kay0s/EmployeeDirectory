@@ -5,6 +5,7 @@ import SearchForm from "../SearchForm/SearchForm";
 
 function EmployeeTable() {
   const [employees, setEmployees] = useState([]);
+  const [empFilter, setEmpFilter] = useState([]);
 
 
     useEffect(() => {
@@ -17,13 +18,15 @@ function EmployeeTable() {
         .then(data => {
             console.log(data);
             setEmployees(data);
+            setEmpFilter(data);
         })
         .catch(err => console.log(err));
     }
     return (
         <>
         <div>
-                  <SearchForm employees = { employees } /> 
+                  <SearchForm employees = { employees }
+                  setFilter = {setEmpFilter} /> 
         </div>
         <table>
             <thead>
@@ -36,7 +39,7 @@ function EmployeeTable() {
                 </tr>
             </thead>
             <tbody>
-                {employees.map(employee => (
+                {empFilter.map(employee => (
                     <tr key={employee.id}>
                     <td>{employee.id}</td>
                     <td>{employee.firstName}</td>

@@ -3,7 +3,7 @@ import "./SearchForm.css";
 
  function SearchForm (props) { 
      const [inputVal, setInputVal] = useState();
-     const [empFilter, setEmpFilter] = useState(props.employees);
+     const [empFilter, setEmpFilter] = useState([]);
     
 
      const handleChange = (e) => {  
@@ -15,7 +15,7 @@ import "./SearchForm.css";
          let newArr = props.employees.filter(employee => employee.firstName.toLowerCase().indexOf(lowerVal) !== -1 );
          console.log(props.employees);
          console.log(newArr);
-         setEmpFilter(newArr);
+        props.setEmpFilter(newArr);
          console.log(newArr);
         } 
 
@@ -33,20 +33,8 @@ import "./SearchForm.css";
                 id="id"
                
                 />
-                <datalist id="employees">
-                    {empFilter.map(id => (
-                        <option value={id} key={id} />
-                    ))}
-                    {/* filterEmployees={this.filterEmployees}
-     id={employees.id}
-     key={employees.id}
-     firstName={employees.firstName}
-     lastName={employees.lastName}
-     email={employees.email}
-     image={employees.image} */}
-                </datalist>
-                
-            </div>
+               
+            </div> 
         </form>
     );
 }
