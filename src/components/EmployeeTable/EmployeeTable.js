@@ -28,11 +28,12 @@ function EmployeeTable() {
     }
     return (
         <>
+        
         <div>
                   <SearchForm employees = { employees }
                   setFilter = {setEmpFilter} /> 
         </div>
-        <table>
+        <table className="table table-striped table-dark">
             <thead>
                   <FNameSortBtn employees = {employees}/>
                   <LNameSortBtn employees = {employees}/>
