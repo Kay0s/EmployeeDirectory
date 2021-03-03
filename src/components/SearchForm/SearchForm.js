@@ -3,7 +3,7 @@ import "./SearchForm.css";
 
  function SearchForm (props) { 
      const [inputVal, setInputVal] = useState();
-     const [empFilter, setEmpFilter] = useState([]);
+  
     
 
      const handleChange = (e) => {  
@@ -15,7 +15,8 @@ import "./SearchForm.css";
          let newArr = props.employees.filter(employee => employee.firstName.toLowerCase().indexOf(lowerVal) !== -1 );
          console.log(props.employees);
          console.log(newArr);
-        props.setEmpFilter(newArr);
+        props.setFilter(newArr);
+        console.log(props.setFilter(newArr));
          console.log(newArr);
         } 
 
