@@ -21,6 +21,7 @@ function EmployeeTable() {
             console.log(data);
             setEmployees(data);
             setEmpFilter(data);
+        
         })
         .catch(err => console.log(err));
     }
@@ -32,7 +33,7 @@ function EmployeeTable() {
         </div>
         <table>
             <thead>
-                  <NameSortBtn sortByName={this.sortByName}/>
+                  <NameSortBtn />
                 <tr>
                     <th>Id</th>
                     <th>First Name</th>
