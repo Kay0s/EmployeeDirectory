@@ -8,11 +8,12 @@ import React, {useState} from "react";
              e.target.value
          )
         console.log(clickVal);
-        let sortedEmployee = props.employees.sort((a, b) =>
+        let sortedEmployee = [...props.employees].sort((a, b) =>
+      
           a.firstName > b.firstName ? 1 : -1
         );
         //target the name to sort
-        props.setClickVal({ sortedEmployee });
+        setClickVal({ sortedEmployee });
       };
 
     return (
