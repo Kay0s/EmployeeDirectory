@@ -3,6 +3,7 @@ import "./EmployeeTable.css";
 import API from "../../utils/API.js";
 import SearchForm from "../SearchForm/SearchForm";
 import FNameSortBtn from "../FNameSortBtn/FNameSortBtn";
+import LNameSortBtn from "../LNameSortBtn/LNameSortBtn";
 
 
 function EmployeeTable() {
@@ -34,6 +35,7 @@ function EmployeeTable() {
         <table>
             <thead>
                   <FNameSortBtn employees = {employees}/>
+                  <LNameSortBtn employees = {employees}/>
                 <tr>
                     <th>Id</th>
                     <th>First Name</th>

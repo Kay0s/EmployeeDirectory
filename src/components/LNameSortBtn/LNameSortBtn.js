@@ -10,7 +10,7 @@ import React, {useState} from "react";
         console.log(clickLNameVal);
         let sortedEmployee = [...props.employees].sort((a, b) =>
       
-          a.firstName > b.firstName ? 1 : -1
+          a.lastName > b.lasstName ? 1 : -1
         );
         //target the name to sort
         setClickLNameVal({ sortedEmployee });
