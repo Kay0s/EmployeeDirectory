@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./EmployeeTable.css";
 import API from "../../utils/API.js";
 import SearchForm from "../SearchForm/SearchForm";
+import NameSortBtn from "../NameSortBtn/NameSortBtn";
+
 
 function EmployeeTable() {
   const [employees, setEmployees] = useState([]);
@@ -30,6 +32,7 @@ function EmployeeTable() {
         </div>
         <table>
             <thead>
+                  <NameSortBtn sortByName={this.sortByName}/>
                 <tr>
                     <th>Id</th>
                     <th>First Name</th>

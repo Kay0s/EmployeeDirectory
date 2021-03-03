@@ -23,7 +23,7 @@ import "./SearchForm.css";
     return (
         <form className ="search">
             <div className="form-group">
-                <label htmlFor="employee">Employee Name:</label>
+                <label htmlFor="employee">Filter for First Name:</label>
                 <input
                 onChange={(e)=> handleChange(e)}
                 name="employee"
@@ -34,19 +34,7 @@ import "./SearchForm.css";
                 id="id"
                
                 />
-                <datalist id="employees">
-                    {props.employees.map(id => (
-                        <option value={id} key={id} />
-                    ))}
-                    props.setFilter={this.inputVal}
-     id={props.employees.id}
-     key={props.employees.id}
-     firstName={props.employees.firstName}
-     lastName={props.employees.lastName}
-     email={props.employees.email}
-     image={props.employees.image}
-                </datalist>
-
+                
                
             </div> 
         </form>
