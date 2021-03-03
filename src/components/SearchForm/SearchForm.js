@@ -15,8 +15,8 @@ import "./SearchForm.css";
          let newArr = props.employees.filter(employee => employee.firstName.toLowerCase().indexOf(lowerVal) !== -1 );
          console.log(props.employees);
          console.log(newArr);
-        props.setFilter(newArr);
-        console.log(props.setFilter(newArr));
+         props.setFilter(newArr);
+         console.log(props.setFilter(newArr));
          console.log(newArr);
         } 
 
@@ -34,6 +34,19 @@ import "./SearchForm.css";
                 id="id"
                
                 />
+                <datalist id="employees">
+                    {props.employees.map(id => (
+                        <option value={id} key={id} />
+                    ))}
+                    props.setFilter={this.inputVal}
+     id={props.employees.id}
+     key={props.employees.id}
+     firstName={props.employees.firstName}
+     lastName={props.employees.lastName}
+     email={props.employees.email}
+     image={props.employees.image}
+                </datalist>
+
                
             </div> 
         </form>
