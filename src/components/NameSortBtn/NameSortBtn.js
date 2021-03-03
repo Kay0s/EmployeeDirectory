@@ -1,19 +1,19 @@
 import React, {useState} from "react";
 
- function NameSortBtn(props) { 
-    const [clickVal, setClickVal] = useState();
+ function FNameSortBtn(props) { 
+    const [clickFNameVal, setClickFNameVal] = useState();
     
      const handleOnClick= (e) => {
-         setClickVal (
+         setClickFNameVal (
              e.target.value
          )
-        console.log(clickVal);
+        console.log(clickFNameVal);
         let sortedEmployee = [...props.employees].sort((a, b) =>
       
           a.firstName > b.firstName ? 1 : -1
         );
         //target the name to sort
-        setClickVal({ sortedEmployee });
+        setClickFNameVal({ sortedEmployee });
       };
 
     return (
@@ -25,4 +25,4 @@ import React, {useState} from "react";
     );
 }
 
-export default NameSortBtn;
+export default FNameSortBtn;

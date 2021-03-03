@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./EmployeeTable.css";
 import API from "../../utils/API.js";
 import SearchForm from "../SearchForm/SearchForm";
-import NameSortBtn from "../NameSortBtn/NameSortBtn";
+import FNameSortBtn from "../NameSortBtn/NameSortBtn";
 
 
 function EmployeeTable() {
@@ -33,7 +33,7 @@ function EmployeeTable() {
         </div>
         <table>
             <thead>
-                  <NameSortBtn employees = {employees}/>
+                  <FNameSortBtn employees = {employees}/>
                 <tr>
                     <th>Id</th>
                     <th>First Name</th>
