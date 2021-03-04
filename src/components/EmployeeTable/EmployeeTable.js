@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
 import API from "../../utils/API.js";
 import SearchForm from "../SearchForm/SearchForm";
-import FNameSortBtn from "../FNameSortBtn/FNameSortBtn";
-import LNameSortBtn from "../LNameSortBtn/LNameSortBtn";
 
 
 function EmployeeTable() {
   const [employees, setEmployees] = useState([]);
   const [empFilter, setEmpFilter] = useState([]);
-
+  const [sortedNames, setSortName] = useState([]);
+  const [sortedId, setId] = useState([]);
 
     useEffect(() => {
         loadEmployees();
@@ -21,21 +20,33 @@ function EmployeeTable() {
             console.log(data);
             setEmployees(data);
             setEmpFilter(data);
-        
         })
         .catch(err => console.log(err));
     }
+    const sortNames = () => {     
+        let sortedNames = employees.sort((a, b) => (
+          a.firstName > b.firstName ? 1 : -1));     
+          console.log({sortedNames});     
+          
+          setSortName({firstName: sortedNames});   
+        };
+        const sortIds = () => {     
+        let sortedIds = employees.sort((a, b) => (
+          a.id > b.id ? 1 : -1));     
+          console.log({sortedIds});     
+          
+          setId({id: sortedIds});   
+        };
     return (
         <>
-        
         <div>
                   <SearchForm employees = { employees }
                   setFilter = {setEmpFilter} /> 
+                  <button type="button" className="btn btn-primary"onClick={sortNames}>First Name Sort</button>
+                  <button type="button" className="btn btn-success"onClick={sortIds}>Id</button>
         </div>
         <table className="table table-striped table-dark">
             <thead>
-                  <FNameSortBtn employees = {employees}/>
-                  <LNameSortBtn employees = {employees}/>
                 <tr>
                     <th>Id</th>
                     <th>First Name</th>
@@ -51,7 +62,7 @@ function EmployeeTable() {
                     <td>{employee.firstName}</td>
                     <td>{employee.lastName}</td>
                     <td>{employee.email}</td>
-                    <img alt={employee.picture} src={employee.picture}/>
+                    <td><img alt={employee.picture} src={employee.picture}/></td>
                     </tr>
                     ))}
             </tbody>

@@ -3,7 +3,6 @@ import React, {useState} from "react";
  function SearchForm (props) { 
      const [inputVal, setInputVal] = useState();
   
-    
 
      const handleChange = (e) => {  
          setInputVal(
