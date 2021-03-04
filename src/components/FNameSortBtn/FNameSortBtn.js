@@ -18,7 +18,7 @@ import React, {useState} from "react";
 
     return (
         <th>
-            <button type="button" onClick={(e)=> handleOnClick(e)}>First Name Sort</button>
+            <button type="button" className="btn btn-primary"onClick={(e)=> handleOnClick(e)}>First Name Sort</button>
         </th>
                
           
