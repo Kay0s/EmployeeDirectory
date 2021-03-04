@@ -18,7 +18,7 @@ import React, {useState} from "react";
 
     return (
         <th>
-            <button type="button" onClick={(e)=> handleOnClick(e)}>Last Name Sort</button>
+            <button type="button" className="btn btn-success" onClick={(e)=> handleOnClick(e)}>Last Name Sort</button>
         </th>
                
           
