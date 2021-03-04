@@ -5,7 +5,7 @@ import axios from "axios";
   export default {
     fetchEmployees: function() {
       return axios
-        .get("https://randomuser.me/api/?results=20")
+        .get("https://randomuser.me/api/?results=20&nat=us")
         .then(res => {
           const employees = res.data.results;
           return employees.map(employee => {
