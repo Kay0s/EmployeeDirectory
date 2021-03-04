@@ -57,7 +57,7 @@ To sort and filter the employees the .sort and .filter methods were employed upo
 
 ## Research
 
-- [MDN Web Docs - Service Worker](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
+- [MDN Web Docs - Array.prototype.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
 - [MDN Web Docs - Array.prototype.filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
 - [React.js](https://reactjs.org/)
 
