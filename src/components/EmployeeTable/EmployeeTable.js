@@ -6,9 +6,7 @@ import SearchForm from "../SearchForm/SearchForm";
 function EmployeeTable() {
   const [employees, setEmployees] = useState([]);
   const [empFilter, setEmpFilter] = useState([]);
-  const [sortedNames, setSortName] = useState([]);
-  const [sortedId, setId] = useState([]);
-
+  
     useEffect(() => {
         loadEmployees();
     }, []);
@@ -24,19 +22,22 @@ function EmployeeTable() {
         .catch(err => console.log(err));
     }
     const sortNames = () => {     
-        let sortedNames = employees.sort((a, b) => (
+        let tempName = [...empFilter]
+        tempName.sort((a, b) => (
           a.firstName > b.firstName ? 1 : -1));     
-          console.log({sortedNames});     
+          console.log(tempName);     
           
-          setSortName({firstName: sortedNames});   
+          setEmpFilter(tempName);   
         };
-        const sortIds = () => {     
-        let sortedIds = employees.sort((a, b) => (
+        const sortIds = () => {  
+        let tempId = [...empFilter]   
+        tempId.sort((a, b) => (
           a.id > b.id ? 1 : -1));     
-          console.log({sortedIds});     
-          
-          setId({id: sortedIds});   
+          console.log(tempId); 
+
+          setEmpFilter(tempId);   
         };
+
     return (
         <>
         <div>
